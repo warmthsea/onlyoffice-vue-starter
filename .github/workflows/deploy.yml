@@ -31,7 +31,7 @@ jobs:
         env:
           TZ: Asia/Shanghai
         run: |
-          cd dist
+          cd docs
           git config --global init.defaultBranch main
           git init
           git config user.name $GITHUB_ACTOR
