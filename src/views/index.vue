@@ -6,42 +6,35 @@ import { useOnlyOfficeState } from '@/components/office/index';
 const { officeState } = useOnlyOfficeState();
 
 /** open drawer */
-const openDrawer = (): void => {
+const initOffice = (): void => {
     officeState.fileData = {
-        url: 'https://warmthsea.github.io/test.xlsx',
+        url: 'http://192.168.10.131:18898/group1/M00/01/50/wKgKg2LwacSAcdDSAAApo9O-Jyw61.xlsx',
         title: '这是一个测试文件标题'
     };
-    officeState.officeDrawer = true;
 };
 
 onMounted(() => {
-    const oldScript = document.getElementById('onlyOffice');
-    if (!oldScript) {
-        let script = document.createElement('script');
-        script.type = 'text/javascript';
-        script.src = 'https://warmthsea.github.io/office_api.js';
-        script.id = 'onlyOffice';
-        document.body.appendChild(script);
-    }
+    initOffice();
 });
 </script>
 
 <template>
-    <div class="flex h-screen">
-        <div class="bg-gray-50 w-25%">
+    <div class="flex h-screen flex-col md:flex-row">
+        <div class="bg-gray-50 w-screen border-amber md:w-20%">
             <div class="py4 px5 flex items-center justify-between">
                 <h1>
-                    <span class="op50 font-300 text-lg leading-1em block"> only office </span>
-                    <span class="font-100 leading-1em block"> Vue Component</span>
+                    <span class="op80 font-300 text-lg leading-1em block"> only office </span>
+                    <span class="leading-1em block"> Vue Component</span>
                 </h1>
                 <img class="w-8 h-8" src="@/assets/github.svg" alt="github" />
             </div>
             <div>
-                <el-button @click="openDrawer()"> open drawer </el-button>
+                <!-- <el-button> open drawer </el-button> -->
             </div>
         </div>
         <div class="flex-1">
             <OnlyOffice
+                :drawer="false"
                 :fileData="officeState.fileData"
                 v-model:officeDrawer="officeState.officeDrawer"
             ></OnlyOffice>
