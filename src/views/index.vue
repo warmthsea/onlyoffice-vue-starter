@@ -7,10 +7,9 @@ const { officeState } = useOnlyOfficeState();
 
 onMounted(() => {
   officeState.fileData = {
-    url: "http://192.168.10.131:18898/group1/M00/01/50/wKgKg2LwacSAcdDSAAApo9O-Jyw61.xlsx",
+    url: "https://warmthsea.github.io/onlyoffice-vue-starter/test.xlsx",
     title: "这是一个测试文件标题",
   };
-  officeState.officeDrawer = true;
 });
 </script>
 
@@ -23,6 +22,9 @@ onMounted(() => {
           <span class="font-100 leading-1em block"> Vue Component</span>
         </h1>
         <img class="w-8 h-8" src="@/assets/github.svg" alt="github" />
+      </div>
+      <div>
+        <el-button @click="officeState.officeDrawer = true"> open drawer </el-button>
       </div>
     </div>
     <div class="flex-1">
