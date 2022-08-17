@@ -1,7 +1,6 @@
 @import "./base.css";
 
 #app {
-  min-width: 1000px;
   font-weight: normal;
 }
 

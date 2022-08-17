@@ -20,7 +20,7 @@ onMounted(() => {
 
 <template>
     <div class="flex h-screen flex-col md:flex-row">
-        <div class="bg-gray-50 w-screen min-w-300px border-amber md:w-20%">
+        <div class="bg-gray-50 w-100% border-amber md:w-20% md:min-w-300px">
             <div class="py4 px5 flex items-center justify-between">
                 <h1>
                     <span class="op50 font-300 text-lg leading-1em block"> only office </span>
