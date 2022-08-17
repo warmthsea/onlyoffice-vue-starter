@@ -5,8 +5,7 @@
     "dev": "vite",
     "build": "run-p type-check build-only",
     "preview": "vite preview --port 4173",
-    "build-only": "vite build",
-    "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false"
+    "build-only": "vite build"
   },
   "dependencies": {
     "element-plus": "^2.2.13",
