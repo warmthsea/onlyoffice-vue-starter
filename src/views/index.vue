@@ -20,11 +20,11 @@ onMounted(() => {
 
 <template>
     <div class="flex h-screen flex-col md:flex-row">
-        <div class="bg-gray-50 w-screen border-amber md:w-20%">
+        <div class="bg-gray-50 w-screen min-w-300px border-amber md:w-20%">
             <div class="py4 px5 flex items-center justify-between">
                 <h1>
-                    <span class="op80 font-300 text-lg leading-1em block"> only office </span>
-                    <span class="leading-1em block"> Vue Component</span>
+                    <span class="op50 font-300 text-lg leading-1em block"> only office </span>
+                    <span class="font-80 leading-1em block"> Vue Component</span>
                 </h1>
                 <img class="w-8 h-8" src="@/assets/github.svg" alt="github" />
             </div>
