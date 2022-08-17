@@ -91,6 +91,7 @@ export const useOnlyOffice = (props: OnlyOfficePropsType) => {
         config.documentType = getDocumentType(props.fileData.url);
         /** DocsAPI , from header ——> create script import */
         editorRef.value = new DocsAPI.DocEditor("placeholder", config);
+        console.log(editorRef.value);
         editorRef.value.denyEditingRights("message");
     };
 

@@ -15,10 +15,14 @@ const openDrawer = (): void => {
 };
 
 onMounted(() => {
-    setTimeout(() => {
-        const oldScript = document.getElementById('onlyOffice');
-        console.log(oldScript);
-    }, 4000);
+    const oldScript = document.getElementById('onlyOffice');
+    if (!oldScript) {
+        let script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'https://warmthsea.github.io/office_api.js';
+        script.id = 'onlyOffice';
+        document.body.appendChild(script);
+    }
 });
 </script>
 
