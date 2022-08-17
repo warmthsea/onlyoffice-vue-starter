@@ -42,7 +42,6 @@ watch(
             } else {
                 previewOffice();
             }
-            console.log(132);
         }
         fileDataClone.value = JSON.stringify(val);
     },
