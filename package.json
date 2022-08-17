@@ -5,7 +5,6 @@
     "dev": "vite",
     "build": "run-p type-check build-only",
     "preview": "vite preview --port 4173",
-    "test:unit": "vitest --environment jsdom",
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false"
   },
@@ -29,7 +28,6 @@
     "unplugin-vue-components": "^0.22.4",
     "unocss":"^0.45.7",
     "vite": "^3.0.4",
-    "vitest": "^0.21.0",
     "vue-tsc": "^0.39.5"
   }
 }
