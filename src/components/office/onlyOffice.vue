@@ -1,54 +1,4 @@
 <script lang="ts" setup>
-/**
- * @type './type.ts'
- * @demo ↓
-
-// script lang="ts" setup
-import OnlyOffice from '@/components/office/onlyOffice.vue';
-import { useOnlyOfficeState , saveOfficeEnvUrl } from '@/components/office/index';
-import type { OnlyOfficePropsType } from '@/components/office/type';
-
-// use only office
-const { officeState } = useOnlyOfficeState();
-
-* @use office | preview
-onMounted(() => {
-    officeState.fileData = {
-        url: 'http://192.168.10.131:18898/group1/M00/01/50/wKgKg2LwacSAcdDSAAApo9O-Jyw61.xlsx',
-        title: '这是一个测试文件标题'
-    };
-    officeState.officeDrawer = true;
-});
-
-// template | office preview 
-<OnlyOffice
-    :fileData="officeState.fileData"
-    v-model:officeDrawer="officeState.officeDrawer"
-></OnlyOffice>
-
-* @use office | edit 
-onMounted(() => {
-    officeState.title = '文件编辑';
-    officeState.fileData = {
-        title: '这是一个测试文件标题',
-        url: 'http://192.168.10.131:18898/group1/M00/01/50/wKgKg2LwacSAcdDSAAApo9O-Jyw61.xlsx',
-        edit: true
-    };
-    officeState.editData = {
-        callbackUrl: saveOfficeEnvUrl + 'xxx',
-        key: 'xxx'
-    };
-    officeState.officeDrawer = true;
-});
-
-<OnlyOffice
-    :fileData="officeState.fileData"
-    :editData="officeState.editData"
-    :title="officeState.title"
-    v-model:officeDrawer="officeState.officeDrawer"
-></OnlyOffice>
- */
-
 import { useVModel } from '@vueuse/core';
 import { useOnlyOffice } from './index';
 import type { OnlyOfficePropsFileType, OnlyOfficePropsEditType } from './type';
@@ -92,6 +42,7 @@ watch(
             } else {
                 previewOffice();
             }
+            console.log(132);
         }
         fileDataClone.value = JSON.stringify(val);
     },
