@@ -29,7 +29,7 @@ const { editorRef, fileDataClone, previewOffice, editOffice } = useOnlyOffice(pr
 watch(
     () => props.fileData,
     async (val) => {
-        if (JSON.stringify(val) !== fileDataClone.value && val) {
+        if (JSON.stringify(val) !== fileDataClone.value && val.url) {
             if (editorRef.value) editorRef.value.destroyEditor();
             await nextTick();
             if (val.edit) {
