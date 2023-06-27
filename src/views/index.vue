@@ -13,6 +13,10 @@ const initOffice = (): void => {
     };
 };
 
+const goGithub = (): void => {
+  window.open('https://github.com/warmthsea/onlyoffice-vue-starter','_blank');  
+};
+    
 onMounted(() => {
     initOffice();
 });
@@ -26,7 +30,7 @@ onMounted(() => {
                     <span class="op50 font-300 text-lg leading-1em block"> only office </span>
                     <span class="font-80 leading-1em block"> Vue Component</span>
                 </h1>
-                <img class="w-8 h-8" src="@/assets/github.svg" alt="github" />
+                <img @click="goGithub()" class="w-8 h-8 cursor-pointer" src="@/assets/github.svg" alt="github" />
             </div>
             <div>
                 <!-- <el-button> open drawer </el-button> -->
