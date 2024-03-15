@@ -1,7 +1,8 @@
 # onlyoffice-vue-starter
 Preview、edit office file
 
-[Preview Docx](https://personal.onlyoffice.com/products/files/doceditor?fileId=5473971)
+[Preview Docx](https://personal.onlyoffice.com/products/files/doceditor?fileId=5473971) |
+[Github](https://github.com/ONLYOFFICE)
 
 It must be used with the server | [Doc Api](https://api.onlyoffice.com/editors/advanced)
 
